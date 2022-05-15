@@ -22,15 +22,15 @@ const requestListener = function (req, res) {
 	const pagesPath = "./pages"
     switch(req.url) {
         case '/':
-            // res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.writeHead(200, { 'Content-Type': 'text/html' });
             res.end(readFile(`${pagesPath}/index.html`));
             break;
         case '/app.css':
-            // res.writeHead(200, { 'Content-Type': 'text/css' });
+            res.writeHead(200, { 'Content-Type': 'text/css' });
             res.end(readFile(req.url));
             break;
         case '/app.js':
-            // res.writeHead(200, { 'Content-Type': 'text/javascript' });
+            res.writeHead(200, { 'Content-Type': 'text/javascript' });
             res.end(readFile(req.url));
             break;
         default:
