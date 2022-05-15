@@ -26,19 +26,21 @@ const requestListener = function (req, res) {
             res.end(readFile(`${pagesPath}/index.html`));
             break;
         case '/app.css':
-            res.writeHead(200, { 'Content-Type': 'text/css' });
+			res.setHeader('Content-Type', 'text/css')
+            res.writeHead(200);
             res.end(readFile(req.url));
             break;
         case '/app.js':
-            res.writeHead(200, { 'Content-Type': 'text/javascript' });
+			res.setHeader('Content-Type', 'text/javascript')
+            res.writeHead(200);
             res.end(readFile(req.url));
             break;
         default:
 			if (getFiles(req.url))
 				res.end(readFile(pagesPath + req.url));
 			else {
-				res.writeHead(404, { 'Content-Type': 'text/plain' });
-				res.end('404');
+				res.writeHead(404, { 'Content-Type': 'text/html' });
+				res.end('404 Not Found');
 			}
     }
 };
