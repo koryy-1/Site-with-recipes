@@ -1,0 +1,15 @@
+.card {
+	margin: 10px;
+}
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+  }
+
+  .carousel-inner img {
+	display: block;
+	width: 600px;
+	height: 350px !important;
+	margin: 0 auto;
+  }
