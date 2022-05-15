@@ -1,2 +1,2 @@
-run = "node server.py"
+run = "node server.js"
 language = "nodejs"
