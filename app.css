@@ -5,11 +5,16 @@ img {
 	display: inline-block;
 	height: auto;
 	max-width: 100%;
-  }
+}
 
-  .carousel-inner img {
-	display: block;
-	width: 600px;
-	height: 350px;
-	margin: 0 auto;
-  }
+.carousel-inner img {
+display: block;
+max-width: 600px;
+max-height: 350px;
+/* margin: 0 auto; */
+}
+
+#card-image{
+	max-width: 600px;
+	text-align: center;
+}
