@@ -26,7 +26,7 @@ const requestListener = function (req, res) {
             res.end(readFile(`${pagesPath}/index.html`));
             break;
         case '/app.css':
-			res.setHeader('content-type', 'text/css')
+			res.setHeader('content-type', 'text/css; charset=utf-8')
             res.writeHead(200);
             res.end(readFile(req.url));
             break;
